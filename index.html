@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Abdirahman Ahmed — Data Science Student & Aspiring Analyst. Nairobi, Kenya." />
+  <meta name="theme-color" content="#4A2E24" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <title>Abdirahman Ahmed · Data Science Student</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="section-dots" id="sectionDots" aria-label="Section navigation">
+    <a href="#top" data-dot="top" aria-label="Top"></a>
+    <a href="#work" data-dot="work" aria-label="Work"></a>
+    <a href="#services" data-dot="services" aria-label="Services"></a>
+    <a href="#about" data-dot="about" aria-label="About"></a>
+    <a href="#notes" data-dot="notes" aria-label="Notes"></a>
+    <a href="#faq" data-dot="faq" aria-label="FAQ"></a>
+    <a href="#contact" data-dot="contact" aria-label="Contact"></a>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">AA</span>
+        <span class="brand-name">ABDIRAHMAN AHMED</span>
+        <span class="brand-dot">.</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#work" class="nav-link" data-section="work">Work</a>
+        <a href="#services" class="nav-link" data-section="services">Services</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#notes" class="nav-link" data-section="notes">Notes</a>
+        <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="cmdk-btn" id="cmdkBtn" aria-label="Open command menu">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <span class="availability-pill">
+          <span class="status-dot"></span>
+          <span id="localTime">--:--</span> EAT
+        </span>
+        <a href="#contact" class="btn-header">
+          Get in touch
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#work" class="mobile-link">Work</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#notes" class="mobile-link">Notes</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-ambient">
+        <div class="ambient-blob ambient-1"></div>
+        <div class="ambient-blob ambient-2"></div>
+        <div class="ambient-blob ambient-3"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-eyebrow" data-reveal>
+            <span class="eyebrow-line"></span>
+            <span>Data Science Student · Nairobi, Kenya</span>
+          </div>
+
+          <h1 class="hero-headline" data-reveal>
+            Learning to turn data<br/>
+            into <em>decisions.</em>
+          </h1>
+
+          <p class="hero-copy" data-reveal>
+            Data Science student at JKUAT and Moringa School. I'm building
+            my foundation in Python, Pandas, and SQL — one project at a time,
+            documented openly on GitHub.
+          </p>
+
+          <div class="hero-actions" data-reveal>
+            <a href="#work" class="btn-primary">
+              <span>View my projects</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/abdirahmanahmed273" target="_blank" rel="noopener" class="btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.7 8.2 11.3.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4C17.7 4.7 18.7 5 18.7 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 22.2 24 17.8 24 12.5 24 5.9 18.6.5 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
+
+          <div class="hero-now" data-reveal>
+            <span class="hero-now-label">Currently</span>
+            <span class="hero-now-value">
+              Learning Pandas &amp; SQL · Building my first ML project
+            </span>
+          </div>
+        </div>
+
+        <aside class="hero-right" data-reveal>
+          <div class="code-window">
+            <div class="code-topbar">
+              <div class="topbar-dots"><span></span><span></span><span></span></div>
+              <span class="topbar-file">filtering_data.ipynb</span>
+              <span class="topbar-badge">Pandas</span>
+            </div>
+            <pre class="code-block"><code><span class="ln">01</span><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="ln">02</span>
+<span class="ln">03</span><span class="cm"># Load the laptop price dataset</span>
+<span class="ln">04</span>df <span class="op">=</span> pd.<span class="fn">read_excel</span>(<span class="str">"laptop_price.xls"</span>)
+<span class="ln">05</span>
+<span class="ln">06</span><span class="cm"># Filter on one condition</span>
+<span class="ln">07</span>cheap <span class="op">=</span> df[df[<span class="str">"Price"</span>] <span class="op">&lt;</span> <span class="num">50000</span>]
+<span class="ln">08</span>
+<span class="ln">09</span><span class="cm"># Filter on multiple conditions</span>
+<span class="ln">10</span>fast <span class="op">=</span> df[(df[<span class="str">"Ram"</span>] <span class="op">&gt;=</span> <span class="num">8</span>) <span class="op">&amp;</span>
+<span class="ln">11</span>        (df[<span class="str">"CPU"</span>].<span class="fn">str.contains</span>(<span class="str">"i7"</span>))]
+<span class="ln">12</span>
+<span class="ln">13</span><span class="fn">print</span>(<span class="str">f"Found {len(cheap)} affordable laptops"</span>)</code></pre>
+            <div class="code-footer">
+              <span class="pulse-dot"></span>
+              <span>Notebooks · 8 lessons</span>
+              <span class="code-footer-time">Pandas</span>
+            </div>
+          </div>
+
+          <div class="hero-badge badge-tl"><span>🐍</span> Python</div>
+          <div class="hero-badge badge-br"><span>📊</span> Pandas</div>
+        </aside>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- TRUSTED -->
+    <section class="trusted">
+      <div class="container">
+        <span class="trusted-label">Studying at</span>
+        <div class="trusted-marks" data-reveal>
+          <span class="trusted-mark">JKUAT</span>
+          <span class="trusted-dot">◆</span>
+          <span class="trusted-mark">Moringa School</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="container">
+
+        <header class="section-head" data-reveal>
+          <span class="section-label">01 — Selected Work</span>
+          <h2 class="section-title">Projects I've built</h2>
+          <p class="section-lede">
+            Two learning projects, documented openly on GitHub. Small — but
+            real, and each one taught me something concrete.
+          </p>
+        </header>
+
+        <div class="projects">
+
+          <article class="project featured" data-reveal>
+            <div class="project-info">
+              <div class="project-tag-row">
+                <span class="project-badge">Featured</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Python for Data Science</h3>
+              <p class="project-desc">
+                A series of Jupyter notebooks covering core Pandas skills —
+                filtering DataFrames on one and multiple conditions, dropping
+                duplicates, finding duplicate rows, using <code>.isin()</code> and
+                <code>unique()</code>, and creating conditional columns. Built on
+                a real laptop-price dataset.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Pandas</span><span>Jupyter</span><span>Excel</span>
+              </div>
+              <a href="https://github.com/AbdirahmanAhmed273/Python-For-Data-Science/tree/main/FilteringData" target="_blank" rel="noopener" class="project-link">
+                View on GitHub
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="project-visual project-visual-1">
+              <div class="mini-chart">
+                <div class="bar" style="--h: 55%"></div>
+                <div class="bar" style="--h: 75%"></div>
+                <div class="bar" style="--h: 40%"></div>
+                <div class="bar" style="--h: 90%"></div>
+                <div class="bar accent" style="--h: 100%"></div>
+                <div class="bar" style="--h: 65%"></div>
+                <div class="bar" style="--h: 80%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reverse" data-reveal>
+            <div class="project-info">
+              <div class="project-tag-row">
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Web Scraping with Pandas</h3>
+              <p class="project-desc">
+                A project that pulls structured data from a website using
+                Python and Pandas — then cleans it and stores it as a
+                DataFrame ready for analysis. My first experience handling
+                real-world, messy data.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Pandas</span><span>Web Scraping</span>
+              </div>
+              <a href="https://github.com/AbdirahmanAhmed273" target="_blank" rel="noopener" class="project-link">
+                View on GitHub
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="project-visual project-visual-2">
+              <svg class="line-chart" viewBox="0 0 300 120" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#C4632F"/>
+                    <stop offset="100%" stop-color="#E5C082"/>
+                  </linearGradient>
+                  <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#F08A62" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#E5C082" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,90 L60,80 L120,55 L180,65 L240,30 L300,20 L300,120 L0,120 Z" fill="url(#fillGrad)"/>
+                <path d="M0,90 L60,80 L120,55 L180,65 L240,30 L300,20" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="300" cy="20" r="4" fill="#E5C082"/>
+              </svg>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-more" data-reveal>
+          <a href="https://github.com/AbdirahmanAhmed273" target="_blank" rel="noopener" class="btn-secondary">
+            More on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+
+        <header class="section-head" data-reveal>
+          <span class="section-label">02 — What I'm Learning</span>
+          <h2 class="section-title">Skills I'm building</h2>
+          <p class="section-lede">
+            Three areas I'm actively learning — through coursework at JKUAT,
+            the Moringa Data Science Program, and personal projects.
+          </p>
+        </header>
+
+        <div class="services-grid">
+
+          <div class="service-card" data-reveal>
+            <div class="service-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-8"/></svg>
+              </div>
+              <span class="service-time">In progress</span>
+            </div>
+            <h3>Data Analysis with Pandas</h3>
+            <p>
+              Loading, cleaning, filtering, and exploring datasets using
+              Pandas — the foundation for everything that comes next.
+            </p>
+            <ul class="service-list">
+              <li>Reading Excel &amp; CSV datasets</li>
+              <li>Filtering on one/multiple conditions</li>
+              <li>Handling duplicates &amp; missing values</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="service-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="service-time">In progress</span>
+            </div>
+            <h3>Python Programming</h3>
+            <p>
+              Writing clean Python — functions, loops, file handling, and
+              the everyday syntax that makes data work possible.
+            </p>
+            <ul class="service-list">
+              <li>Core syntax &amp; data types</li>
+              <li>Working with files &amp; folders</li>
+              <li>Basic scripting &amp; automation</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-reveal>
+            <div class="service-top">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v10M1 12h6m10 0h6"/></svg>
+              </div>
+              <span class="service-time">Starting</span>
+            </div>
+            <h3>Machine Learning Foundations</h3>
+            <p>
+              Beginning my first ML project — understanding the workflow
+              from problem framing to model evaluation.
+            </p>
+            <ul class="service-list">
+              <li>Supervised learning basics</li>
+              <li>Training/testing splits</li>
+              <li>Model evaluation metrics</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <header class="section-head" data-reveal>
+          <span class="section-label">03 — About</span>
+          <h2 class="section-title">A quick introduction</h2>
+        </header>
+
+        <div class="about-layout">
+
+          <div class="about-text" data-reveal>
+            <p class="about-lead">
+              I'm early in my data science journey — and I'm being honest
+              about that. What I have is a clear direction, a habit of
+              building in public, and a strong motivation to learn.
+            </p>
+            <p>
+              I'm completing a BSc. in Information Technology at JKUAT and
+              training through the Moringa School Data Science Program. So
+              far I've built a Pandas notebook series, a web scraping
+              project, and I'm starting my first machine learning project.
+              Every project is documented on GitHub — mistakes included.
+            </p>
+            <p>
+              What I'm looking for now is an internship, a mentorship, or a
+              collaboration where I can learn from people doing this work
+              every day.
+            </p>
+            <div class="about-signature">
+              <span class="sig-mark">— Abdirahman</span>
+            </div>
+          </div>
+
+          <aside class="about-card" data-reveal>
+            <div class="about-avatar">
+              <span>AA</span>
+              <div class="about-avatar-ring"></div>
+            </div>
+            <div class="about-info">
+              <div class="about-row">
+                <span class="about-label">Based</span>
+                <span class="about-value">Nairobi, Kenya</span>
+              </div>
+              <div class="about-row">
+                <span class="about-label">Studying</span>
+                <span class="about-value">BSc. IT · JKUAT</span>
+              </div>
+              <div class="about-row">
+                <span class="about-label">Also at</span>
+                <span class="about-value">Moringa School</span>
+              </div>
+              <div class="about-row">
+                <span class="about-label">Languages</span>
+                <span class="about-value">English · Arabic · Swahili</span>
+              </div>
+              <div class="about-row">
+                <span class="about-label">Status</span>
+                <span class="about-value status-open">
+                  <span class="status-dot"></span>
+                  Open to internships
+                </span>
+              </div>
+            </div>
+            <a href="#contact" class="about-cta">
+              Get in touch
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+
+        <header class="section-head" data-reveal>
+          <span class="section-label">04 — Toolkit</span>
+          <h2 class="section-title">What I work with</h2>
+          <p class="section-lede">
+            Only what I've actually used in a project or course — nothing
+            aspirational.
+          </p>
+        </header>
+
+        <div class="skills-groups">
+
+          <div class="skill-group" data-reveal>
+            <h3 class="skill-group-title">Comfortable with</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Jupyter</span>
+              <span class="skill-tag">Excel</span>
+            </div>
+          </div>
+
+          <div class="skill-group" data-reveal>
+            <h3 class="skill-group-title">Learning now</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Web Scraping</span>
+            </div>
+          </div>
+
+          <div class="skill-group" data-reveal>
+            <h3 class="skill-group-title">Just starting</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+
+          <div class="skill-group" data-reveal>
+            <h3 class="skill-group-title">Also</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">English</span>
+              <span class="skill-tag">Arabic</span>
+              <span class="skill-tag">Swahili</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section class="section" id="notes">
+      <div class="container">
+
+        <header class="section-head" data-reveal>
+          <span class="section-label">05 — Notes</span>
+          <h2 class="section-title">Things I'm learning</h2>
+          <p class="section-lede">
+            Short write-ups I plan to publish as I go — one per topic I
+            finish. No notes yet, but they're coming.
+          </p>
+        </header>
+
+        <div class="notes-grid">
+
+          <article class="note-card" data-reveal>
+            <span class="note-date">Planned · Pandas</span>
+            <h3 class="note-title">Filtering DataFrames: the patterns I use most</h3>
+            <p class="note-excerpt">
+              A short reference for the filtering tricks I keep coming back
+              to — single conditions, multiple conditions, and <code>.isin()</code>.
+            </p>
+            <span class="note-link note-link-disabled">Coming soon</span>
+          </article>
+
+          <article class="note-card" data-reveal>
+            <span class="note-date">Planned · Web Scraping</span>
+            <h3 class="note-title">My first time scraping a real website</h3>
+            <p class="note-excerpt">
+              What I learned about messy HTML, missing values, and turning a
+              webpage into a clean DataFrame.
+            </p>
+            <span class="note-link note-link-disabled">Coming soon</span>
+          </article>
+
+          <article class="note-card" data-reveal>
+            <span class="note-date">Planned · Learning</span>
+            <h3 class="note-title">How I'm structuring my data science learning</h3>
+            <p class="note-excerpt">
+              My approach to learning — build something small, document it,
+              then move on to the next concept.
+            </p>
+            <span class="note-link note-link-disabled">Coming soon</span>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <div class="container">
+        <blockquote class="quote" data-reveal>
+          <span class="quote-mark">"</span>
+          <p>
+            The best time to start building a portfolio is before you think
+            you're ready. Everything I know, I learned by starting small
+            and shipping anyway.
+          </p>
+          <footer class="quote-author">
+            <span class="quote-avatar">AA</span>
+            <div>
+              <span class="quote-name">Abdirahman Ahmed</span>
+              <span class="quote-role">Note to self · Nairobi</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <header class="section-head" data-reveal>
+          <span class="section-label">06 — FAQ</span>
+          <h2 class="section-title">Frequently asked</h2>
+        </header>
+
+        <div class="faq-list">
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What kind of work are you looking for?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-body">
+                <p>
+                  Internships, mentorships, or junior roles where I can work
+                  on real data problems and learn from people doing the work
+                  every day. Remote or Nairobi-based.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What are you currently learning?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-body">
+                <p>
+                  Right now: strengthening my Pandas and SQL, and beginning
+                  my first machine learning project through the Moringa
+                  School Data Science Program.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Where can I see your work?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-body">
+                <p>
+                  Everything I've built is public on
+                  <a href="https://github.com/AbdirahmanAhmed273" target="_blank" rel="noopener">GitHub</a>.
+                  I document as I go — including the parts that don't work
+                  on the first try.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How can I reach you?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-body">
+                <p>
+                  Best way is email — I read every message and reply within
+                  24 hours. You can also reach me on LinkedIn.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-layout">
+
+          <div class="contact-left" data-reveal>
+            <span class="section-label">07 — Contact</span>
+            <h2 class="contact-title">
+              Let's talk about<br/>
+              <em>learning data.</em>
+            </h2>
+            <p class="contact-copy">
+              Open to internships, mentorships, and collaborations. If you
+              have advice, a project, or just want to say hi — my inbox is
+              always open.
+            </p>
+            <div class="contact-quick">
+              <button class="copy-btn" id="copyEmail" data-email="abdirahmanmoha608@gmail.com">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                <span>Copy email</span>
+              </button>
+              <span class="contact-divider">·</span>
+              <span class="contact-quick-text">abdirahmanmoha608@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact-right" data-reveal>
+            <a href="mailto:abdirahmanmoha608@gmail.com" class="contact-item contact-item-email">
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value contact-value-email">abdirahmanmoha608@gmail.com</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/abdiahmed-ds" target="_blank" rel="noopener" class="contact-item">
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">/in/abdiahmed-ds</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+            <a href="https://github.com/AbdirahmanAhmed273" target="_blank" rel="noopener" class="contact-item">
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">@AbdirahmanAhmed273</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand">
+            <span class="brand-mark">AA</span>
+            <span class="brand-name">Abdirahman Ahmed</span>
+            <span class="brand-dot">.</span>
+          </a>
+          <p class="footer-tagline">
+            Data Science Student<br/>
+            Learning in public, one project at a time.
+          </p>
+          <div class="footer-status">
+            <span class="status-dot"></span>
+            Open to internships · Nairobi, Kenya
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <span class="footer-heading">Navigate</span>
+            <a href="#work">Work</a>
+            <a href="#services">Learning</a>
+            <a href="#about">About</a>
+            <a href="#notes">Notes</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">Connect</span>
+            <a href="mailto:abdirahmanmoha608@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/abdiahmed-ds" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/AbdirahmanAhmed273" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">Based</span>
+            <span class="footer-text">Nairobi, Kenya</span>
+            <span class="footer-text">EAT · UTC+3</span>
+            <span class="footer-text">Available remote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Abdirahman Ahmed</span>
+        <span class="footer-meta">
+          Built with <span class="footer-love">care</span> in Nairobi 🇰🇪
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- COMMAND PALETTE -->
+  <div class="cmdk" id="cmdk" hidden>
+    <div class="cmdk-backdrop" data-cmdk-close></div>
+    <div class="cmdk-panel">
+      <div class="cmdk-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="cmdkInput" placeholder="Search sections, links, actions…" autocomplete="off" />
+        <kbd>ESC</kbd>
+      </div>
+      <div class="cmdk-list" id="cmdkList">
+        <a href="#work" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">📁</span><span class="cmdk-label">Work</span><span class="cmdk-hint">Go to section</span></a>
+        <a href="#services" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">⚙️</span><span class="cmdk-label">Learning</span><span class="cmdk-hint">Go to section</span></a>
+        <a href="#about" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">👤</span><span class="cmdk-label">About</span><span class="cmdk-hint">Go to section</span></a>
+        <a href="#notes" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">📝</span><span class="cmdk-label">Notes</span><span class="cmdk-hint">Go to section</span></a>
+        <a href="#faq" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">❓</span><span class="cmdk-label">FAQ</span><span class="cmdk-hint">Go to section</span></a>
+        <a href="#contact" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">✉️</span><span class="cmdk-label">Contact</span><span class="cmdk-hint">Go to section</span></a>
+        <a href="mailto:abdirahmanmoha608@gmail.com" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">📧</span><span class="cmdk-label">Send email</span><span class="cmdk-hint">Opens mail client</span></a>
+        <a href="https://github.com/AbdirahmanAhmed273" target="_blank" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">🐙</span><span class="cmdk-label">GitHub</span><span class="cmdk-hint">New tab</span></a>
+        <a href="https://linkedin.com/in/abdiahmed-ds" target="_blank" class="cmdk-item" data-cmdk-item><span class="cmdk-icon">💼</span><span class="cmdk-label">LinkedIn</span><span class="cmdk-hint">New tab</span></a>
+      </div>
+      <div class="cmdk-empty" id="cmdkEmpty" hidden>No results</div>
+      <div class="cmdk-footer">
+        <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+        <span><kbd>↵</kbd> Select</span>
+        <span><kbd>ESC</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
