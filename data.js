@@ -16,7 +16,7 @@ window.PORTFOLIO_DATA = {
     timezone: "EAT",
     email: "abdirahmanmoha608@gmail.com",
     linkedin: "https://linkedin.com/in/abdiahmed-ds",
-    github: "https://github.com/AbdirahmanAhmed273",
+    github: "https://github.com/abdiahmed-ds",
   },
 
   /* ---------- STATS ----------
