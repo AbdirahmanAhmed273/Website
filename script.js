@@ -31,12 +31,15 @@
       .join("");
   }
 
-  /* --- CURRENTLY PILL --- */
-  const nowLabel = document.querySelector(".hero-now-label");
-  const nowValue = document.querySelector(".hero-now-value");
-  if (data.currently) {
-    if (nowLabel) nowLabel.textContent = data.currently.label;
-    if (nowValue) nowValue.textContent = data.currently.text;
+   /* --- CURRENTLY PILLS (only overwrite the first one) --- */
+  if (data.currently && data.currently.text) {
+    const firstNow = document.querySelector(".hero-now-stack .hero-now:first-child");
+    if (firstNow) {
+      const label = firstNow.querySelector(".hero-now-label");
+      const value = firstNow.querySelector(".hero-now-value");
+      if (label) label.textContent = data.currently.label;
+      if (value) value.textContent = data.currently.text;
+    }
   }
 
   /* --- LINKS --- */

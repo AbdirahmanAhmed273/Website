@@ -51,9 +51,12 @@ window.PORTFOLIO_DATA = {
   ],
 
   /* ---------- CURRENTLY ---------- */
+   /* ---------- CURRENTLY ----------
+     Optional — if you set `text: ""` the loader will
+     leave the pills in your HTML untouched. */
   currently: {
     label: "Currently",
-    text: "Learning Pandas & SQL · Building my first ML project",
+    text: "",
   },
 
   /* ---------- AVAILABILITY ---------- */

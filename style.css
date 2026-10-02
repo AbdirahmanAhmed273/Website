@@ -411,7 +411,7 @@ kbd {
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 160px 0 100px;
+  padding: 220px 0 100px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -2173,5 +2173,64 @@ kbd {
 @supports (-webkit-touch-callout: none) {
   input, textarea, select {
     font-size: 16px !important;
+  }
+}
+/* ==========================================
+   HERO "CURRENTLY" STACK — two pills
+   ========================================== */
+.hero-now-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+.hero-now-stack .hero-now {
+  margin-bottom: 0;
+}
+
+/* On mobile, keep both pills but ensure they don't overflow */
+@media (max-width: 720px) {
+  .hero-now-stack {
+    gap: 8px;
+    width: 100%;
+  }
+  .hero-now-stack .hero-now {
+    width: 100%;
+  }
+}
+/* ==========================================
+   HERO "CURRENTLY" STACK — force proper stacking
+   ========================================== */
+.hero-now-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  align-items: flex-start !important;
+  margin-top: 0 !important;
+  width: 100% !important;
+}
+
+.hero-now-stack .hero-now {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+@media (max-width: 720px) {
+  .hero-now-stack {
+    gap: 8px !important;
+  }
+  .hero-now-stack .hero-now {
+    width: 100% !important;
+    flex-wrap: wrap !important;
   }
 }
